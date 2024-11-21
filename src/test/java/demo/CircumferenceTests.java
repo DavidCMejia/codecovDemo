@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class CircumferenceTests {
     private Circumference c = new Circumference();
-    log('hola');
+    System.out.println('hola');
     // Triangle
     @Test
     public void checkTriangleValidInput(){

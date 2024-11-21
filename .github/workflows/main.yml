@@ -1,17 +1,17 @@
 name: Mi Primer Workflow
 
 on:
-  push:         # Este workflow se ejecutará cuando haya un push en cualquier rama
+  push:         # el trigger q dispara es decir en push
     branches:
-      - main    # Puedes especificar otra rama si lo prefieres
+      - main    # las ramas q se ejecuta
 
 jobs:
   build:
-    runs-on: ubuntu-latest   # Define el sistema operativo donde correrá el workflow
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clonar el repositorio
-        uses: actions/checkout@v3  # Esta acción clona el repositorio
+        uses: actions/checkout@v3  # Clona el repo, bien podría ser ejecutar un Linter o cualquier otro action
 
       - name: Decir Hola Mundo
         run: echo "Hola Mundo desde GitHub Actions 🚀"
